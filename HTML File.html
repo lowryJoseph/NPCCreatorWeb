@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title class = "title">Create an NPC with the click of a button</title>
+
+</head>
+<body>
+    <h1 id="raceHeader">Choose a Race: </h1>
+    <script type = "text/javascript" src = "raceFunctions.js"></script>
+
+    <div class = "raceButtons">
+        <Button id = "dwarf" onclick = dwarf()>Dwarf</Button>
+        <Button id = "elf" onclick = elf()>Elf</Button>
+        <Button id = "gnome" onclick = gnome()>Gnome</Button>
+        <Button id = "human" onclick = human()>Human</Button>
+        <Button id = "halfElf" onclick = halfElf()>Half-Elf</Button>
+        <Button id = "halfOrc" onclick = halfOrc()>Half-Orc</Button>
+        <Button id = "halfling" onclick = halfling()>Halfling</Button>
+        <link rel="stylesheet" href="pickRace.css">
+    </div>
+
+    <h1 id="classHeader" >Choose a Class: </h1>
+    <script type = "text/javascript" src = "classFunctions.js"></script>
+
+    <div class = "class-buttons">
+        <Button id = "barbarian" onclick = barbarian()>Barbarian</Button>
+        <Button id = "bard" onclick = bard()>Bard</Button>
+        <Button id = "sorcerer" onclick = sorcerer()>Sorcerer</Button>
+        <Button id = "wizard" onclick = wizard()>Wizard</Button>
+        <Button id = "fighter" onclick = fighter()>Fighter</Button>
+        <Button id = "turd" onclick = turd()>Turd</Button>
+        <Button id = "rogue" onclick = rogue()>Rogue</Button>
+        <link rel="stylesheet" href="pickClass.css">
+    </div>
+</body>
+</html>
