@@ -1,0 +1,15 @@
+.abilityScores textArea {
+  background-color: #04AA6D; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: arrow; /* Pointer/hand icon */
+  width: 10%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+  float: right;
+}
+
+.abilityScores textArea:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+

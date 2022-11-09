@@ -4,10 +4,12 @@ const heading = document.getElementById('raceHeader');
 function dwarf(){
 race = "Dwarf";
 confirmRaceChoice();
+racialModifiers();
 }
 function elf(){
 race = "Elf";
 confirmRaceChoice();
+racialModifiers();
 }
 function human(){
 race = "Human";
@@ -20,14 +22,17 @@ confirmRaceChoice();
 function halfOrc(){
 race = "Half-Orc";
 confirmRaceChoice();
+racialModifiers();
 }
 function gnome(){
 race = "Gnome";
 confirmRaceChoice();
+racialModifiers();
 }
 function halfling(){
 race = "Halfling";
 confirmRaceChoice();
+racialModifiers();
 }
 
 

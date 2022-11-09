@@ -3,7 +3,10 @@ const classHeader = document.getElementById('classHeader');
 
 function barbarian(){
     chosenClass = "Barbarian";
-    confirmClassChoice();
+//    confirmClassChoice();
+    if(rolledStats != [0,0,0,0,0,0])
+        alert("YES");
+    populateStats();
 }
 function bard(){
     chosenClass = "Bard";

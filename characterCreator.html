@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title class = "title">Create an NPC with the click of a button</title>
+
+</head>
+<body>
+<h1>Create a D&D character with the click of a button(or a few more)</h1>
+<h1 id="raceHeader">Choose a Race: </h1>
+<script type = "text/javascript" src = "statUpdates.js"></script>
+<script type = "text/javascript" src = "raceFunctions.js"></script>
+
+
+<div class = "raceButtons">
+    <Button id = "dwarf" onclick = dwarf()>Dwarf</Button>
+    <Button id = "elf" onclick = elf()>Elf</Button>
+    <Button id = "gnome" onclick = gnome()>Gnome</Button>
+    <Button id = "human" onclick = human()>Human</Button>
+    <Button id = "halfElf" onclick = halfElf()>Half-Elf</Button>
+    <Button id = "halfOrc" onclick = halfOrc()>Half-Orc</Button>
+    <Button id = "halfling" onclick = halfling()>Halfling</Button>
+    <link rel="stylesheet" href="pickRace.css">
+</div>
+
+<h1 id="classHeader" >Choose a Class: </h1>
+<script type = "text/javascript" src = "classFunctions.js"></script>
+
+<div class = "class-buttons">
+    <Button id = "barbarian" onclick = barbarian()>Barbarian</Button>
+    <Button id = "bard" onclick = bard()>Bard</Button>
+    <Button id = "sorcerer" onclick = sorcerer()>Sorcerer</Button>
+    <Button id = "wizard" onclick = wizard()>Wizard</Button>
+    <Button id = "fighter" onclick = fighter()>Fighter</Button>
+    <Button id = "turd" onclick = turd()>Turd</Button>
+    <Button id = "rogue" onclick = rogue()>Rogue</Button>
+    <link rel="stylesheet" href="pickClass.css">
+</div>
+
+<h1> Stats</h1>
+<div class = "statsLabels">
+    <label id = "abilName">Ability Name</label>
+    <label id = "abilScore"> Ability Score </label>
+    <label id = "abilMod"> Ability Modifier </label>
+    <link rel="stylesheet" href="stats.css">
+</div>
+<div class = "statsLabels">
+    <label id = "strLabel">STR</label>
+    <label id = "strtext"> 0 </label>
+    <label id = "strMod"> 0 </label>
+    <link rel="stylesheet" href="stats.css">
+</div>
+<div class = "statsLabels">
+    <label id = "dexLabel">DEX</label>
+    <label id = "dextext"> 0 </label>
+    <label id = "dexMod"> 0 </label>
+    <link rel="stylesheet" href="stats.css">
+</div>
+<div class = "statsLabels">
+    <label id = "conLabel">CON</label>
+    <label id = "context"> 0 </label>
+    <label id = "conMod"> 0 </label>
+    <link rel="stylesheet" href="stats.css">
+</div>
+<div class = "statsLabels">
+    <label id = "intLabel">INT</label>
+    <label id = "inttext"> 0 </label>
+    <label id = "intMod"> 0 </label>
+    <link rel="stylesheet" href="stats.css">
+</div>
+<div class = "statsLabels">
+    <label id = "wisLabel">WIS</label>
+    <label id = "wistext"> 0 </label>
+    <label id = "wisMod"> 0 </label>
+    <link rel="stylesheet" href="stats.css">
+</div>
+<div class = "statsLabels">
+    <label id = "chaLabel">CHA</label>
+    <label id = "chatext"> 0 </label>
+    <label id = "chaMod"> 0 </label>
+    <link rel="stylesheet" href="stats.css">
+</div>
+<div class = "rollForStats">
+    <Button id = "twentySided" onclick = rollStatD20()>Roll 20 sided die</Button>
+    <Button id = "sixSided" onclick = setStatsD6()>Roll 4 six sided die drop lowest</Button>
+</div>
+
+
+</body>
+</html>
