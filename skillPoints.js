@@ -22,7 +22,7 @@ function minusSkill(id){
 
 function changeRemainingPointsPlus(){
     const remainingPoints = document.getElementById("remainingPoints");
-    let oldPoints = parseInt(remainingPoints.textContent);
+    let oldPoints = parseInt(remainingPoints.textContent) ;
     remainingPoints.textContent = oldPoints+1;
 }
 function changeRemainingPointsMinus(){

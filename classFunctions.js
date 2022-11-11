@@ -32,7 +32,7 @@ function confirmClassChoice(){
     if(confirm(confirmation) == true){
         removeClasses();
         displayClass();
-        }
+    }
 }
 function removeClasses() {
     let barbarian = document.getElementById('barbarian')

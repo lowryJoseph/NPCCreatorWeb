@@ -106,6 +106,6 @@ function startingPoints(){
         const remainingPoints = document.getElementById("remainingPoints");
         const int = document.getElementById('intMod');
         let intPoints = parseInt(int.textContent);
-        remainingPoints.textContent = ((intPoints+4)*4);
+        remainingPoints.textContent = ((intPoints+4)*4) ;
     }
 }
