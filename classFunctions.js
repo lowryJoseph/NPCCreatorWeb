@@ -3,34 +3,26 @@ const classHeader = document.getElementById('classHeader');
 
 function barbarian(){
     chosenClass = "Barbarian";
-//    confirmClassChoice();
     if(rolledStats != [0,0,0,0,0,0])
-        alert("YES");
     populateStats();
 }
 function bard(){
     chosenClass = "Bard";
-    confirmClassChoice();
 }
 function sorcerer(){
     chosenClass = "Sorcerer";
-    confirmClassChoice();
 }
 function wizard(){
     chosenClass = "Wizard";
-    confirmClassChoice();
 }
 function fighter(){
     chosenClass = "Fighter";
-    confirmClassChoice();
 }
 function turd(){
     chosenClass = "Turd";
-    confirmClassChoice();
 }
 function rogue(){
     chosenClass = "Rogue";
-    confirmClassChoice();
 }
 function displayClass(){
     classHeader.textContent = "Chosen Class Is: "+chosenClass;

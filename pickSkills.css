@@ -1,0 +1,9 @@
+.skills label{
+  background-color: Blue; /* Green background */
+  border: 1px solid white; /* Green border */
+  color: WHITE; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: arrow; /* Pointer/hand icon */
+  width: 10%; /* Set a width if needed */
+  display: inline-block; /* Make the buttons appear below each other */
+}
