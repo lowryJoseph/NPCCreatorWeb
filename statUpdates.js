@@ -102,6 +102,8 @@ function populateStats(){
 
     startingPoints();
     changeSkillsForClass();
+    let explainSkillsId = document.getElementById('explainSkillsId');
+    explainSkillsId.removeAttribute('hidden');
 }
 function barbarianStats(){
     tempStats[2] = rolledStats[5];

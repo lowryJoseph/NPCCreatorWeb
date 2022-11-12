@@ -15,3 +15,19 @@
   cursor: arrow; /* Pointer/hand icon */
   width: 10%; /* Set a width if needed */
 }
+
+.explainSkills #classSkill label{
+    background-color: green;
+    color: black;
+    width 10%
+}
+#crossClassSkill .explainSkills{
+    background-color: yellow;
+    color: black;
+    width 10%
+}
+#cannotBuySkill .explainSkills{
+    background-color: red;
+    color: black;
+    width 10%
+}
