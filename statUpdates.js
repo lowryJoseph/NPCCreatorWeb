@@ -1,6 +1,7 @@
 const racialStats =[0,0,0,0,0,0]
-const rolledStats = [0,0,0,0,0,0]
-
+let rolledStats = [0,0,0,0,0,0]
+let tempStats = [0,0,0,0,0,0];
+let tempHolder = 0;
 
 function racialModifiers(){
     if(race == "Dwarf"){
@@ -27,12 +28,15 @@ function racialModifiers(){
 }
 
 function rollStatD20() {
+    rolledStats = [0,0,0,0,0,0];
   for(let i = 0; i < rolledStats.length; i++){
     rolledStats[i] = Math.floor(Math.random() * 20)+4;
     if(rolledStats[i] > 20)
         rolledStats[i] = 20;
   }
       const skillsId = document.getElementById('skillsId');
+      const skillsRemainingPoints = document.getElementById('skillsRemainingPoints');
+      skillsRemainingPoints.removeAttribute('hidden');
       skillsId.removeAttribute('hidden');
       populateStats();
       statModifiers();
@@ -47,6 +51,7 @@ function rollStatD6(){
   	return statArrayD6[1]+statArrayD6[2]+statArrayD6[3];
 }
 function setStatsD6(){
+    rolledStats = [0,0,0,0,0,0];
     for(let i = 0; i < rolledStats.length; i++){
         rolledStats[i] = rollStatD6();
     }
@@ -64,6 +69,30 @@ function populateStats(){
     const int = document.getElementById('inttext');
     const wis = document.getElementById('wistext');
     const cha = document.getElementById('chatext');
+    rolledStats = rolledStats.sort(function(a, b){return a - b});
+    if(chosenClass == "Barbarian")
+        barbarianStats();
+    else if(chosenClass == "Bard")
+        bardStats();
+    else if(chosenClass == "Cleric")
+        clericStats();
+    else if(chosenClass == "Druid")
+        druidStats();
+    else if(chosenClass == "Fighter")
+        fighterStats();
+    else if(chosenClass == "Monk")
+        monkStats();
+    else if(chosenClass == "Paladin")
+        paladinStats();
+    else if(chosenClass == "Ranger")
+        rangerStats();
+    else if(chosenClass == "Rogue")
+        rogueStats();
+    else if(chosenClass == "Sorcerer")
+        sorcererStats();
+    else if(chosenClass == "Wizard")
+        wizardStats();
+
     str.textContent = rolledStats[0];
     dex.textContent = rolledStats[1];
     con.textContent = rolledStats[2];
@@ -72,6 +101,106 @@ function populateStats(){
     cha.textContent = rolledStats[5];
 
     startingPoints();
+    changeSkillsForClass();
+}
+function barbarianStats(){
+    tempStats[2] = rolledStats[5];
+    tempStats[0] = rolledStats[4];
+    tempStats[1] = rolledStats[3];
+    tempStats[4] = rolledStats[2];
+    tempStats[3] = rolledStats[1];
+    tempStats[5] = rolledStats[0];
+    rolledStats = tempStats;
+}
+function bardStats(){
+    tempStats[5] = rolledStats[5];
+    tempStats[3] = rolledStats[4];
+    tempStats[4] = rolledStats[3];
+    tempStats[2] = rolledStats[2];
+    tempStats[0] = rolledStats[1];
+    tempStats[1] = rolledStats[0];
+    rolledStats = tempStats;
+}
+function clericStats(){
+    tempStats[4] = rolledStats[5];
+    tempStats[5] = rolledStats[4];
+    tempStats[2] = rolledStats[3];
+    tempStats[3] = rolledStats[2];
+    tempStats[1] = rolledStats[1];
+    tempStats[0] = rolledStats[0];
+    rolledStats = tempStats;
+}
+function druidStats(){
+    tempStats[4] = rolledStats[5];
+    tempStats[1] = rolledStats[4];
+    tempStats[2] = rolledStats[3];
+    tempStats[5] = rolledStats[2];
+    tempStats[3] = rolledStats[1];
+    tempStats[0] = rolledStats[0];
+    rolledStats = tempStats;
+}
+function fighterStats(){
+    tempStats[0] = rolledStats[5];
+    tempStats[2] = rolledStats[4];
+    tempStats[1] = rolledStats[3];
+    tempStats[4] = rolledStats[2];
+    tempStats[3] = rolledStats[1];
+    tempStats[5] = rolledStats[0];
+    rolledStats = tempStats;
+}
+function monkStats(){
+    tempStats[1] = rolledStats[5];
+    tempStats[4] = rolledStats[4];
+    tempStats[2] = rolledStats[3];
+    tempStats[0] = rolledStats[2];
+    tempStats[3] = rolledStats[1];
+    tempStats[5] = rolledStats[0];
+    rolledStats = tempStats;
+}
+function paladinStats(){
+    tempStats[0] = rolledStats[5];
+    tempStats[5] = rolledStats[4];
+    tempStats[2] = rolledStats[3];
+    tempStats[1] = rolledStats[2];
+    tempStats[4] = rolledStats[1];
+    tempStats[3] = rolledStats[0];
+    rolledStats = tempStats;
+}
+function rangerStats(){
+    tempStats[0] = rolledStats[5];
+    tempStats[1] = rolledStats[4];
+    tempStats[2] = rolledStats[3];
+    tempStats[4] = rolledStats[2];
+    tempStats[5] = rolledStats[1];
+    tempStats[3] = rolledStats[0];
+    rolledStats = tempStats;
+}
+function rogueStats(){
+    tempStats[1] = rolledStats[5];
+    tempStats[5] = rolledStats[4];
+    tempStats[2] = rolledStats[3];
+    tempStats[3] = rolledStats[2];
+    tempStats[4] = rolledStats[1];
+    tempStats[0] = rolledStats[0];
+    rolledStats = tempStats;
+}
+function sorcererStats(){
+    tempStats[2] = rolledStats[5];
+    tempStats[3] = rolledStats[4];
+    tempStats[4] = rolledStats[3];
+    tempStats[1] = rolledStats[2];
+    tempStats[5] = rolledStats[1];
+    tempStats[0] = rolledStats[0];
+    rolledStats = tempStats;
+}
+function wizardStats(){
+    tempStats[3] = rolledStats[5];
+    tempStats[2] = rolledStats[4];
+    tempStats[1] = rolledStats[3];
+    tempStats[4] = rolledStats[2];
+    tempStats[0] = rolledStats[1];
+    tempStats[5] = rolledStats[0];
+    rolledStats = tempStats;
 }
 
 function statModifiers(){

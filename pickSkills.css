@@ -1,18 +1,17 @@
 .skills label{
-  background-color: Blue; /* Green background */
+  background-color: green; /* Green background */
   border: 1px solid white; /* Green border */
-  color: WHITE; /* White text */
+  color: BLACK; /* Black text */
   padding: 10px 24px; /* Some padding */
   cursor: arrow; /* Pointer/hand icon */
-  width: 10%; /* Set a width if needed */
+  width: 15%; /* Set a width if needed */
   display: inline-block; /* Make the buttons appear below each other */
 }
-.secondThird label{
-  background-color: Blue; /* Green background */
+
+.skillsRemainingPoints label{
+ background-color: Black; /* Green background */
   border: 1px solid white; /* Green border */
   color: WHITE; /* White text */
-  padding: 10px 24px; /* Some padding */
   cursor: arrow; /* Pointer/hand icon */
   width: 10%; /* Set a width if needed */
-  display: inline-block; /* Make the buttons appear below each other */
 }

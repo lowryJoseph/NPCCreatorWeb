@@ -188,3 +188,5 @@ function randomName(){
     randomName.removeAttribute("hidden");
     randomName.textContent = "Now known as: "+ nameChosen;
 }
+
+
