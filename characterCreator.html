@@ -8,12 +8,15 @@
 <body>
 
 <h1>Create a D&D character with the click of a button(or a few more)</h1>
-<h1 id="raceHeader">Choose a Race: </h1>
-<!--<img src="/pictures/allRacesMale.jpeg">-->
-
-
+<h1 id = "randomName" hidden></h1>
+<div id = gender>
+    <h1>Male or Female?</h1>
+    <button onclick = male()>Male</button>
+    <button onclick = female()>Female</button>
+    <link rel="stylesheet" href="pickClass.css">
+</div>
+    <h1 id="raceHeader">Choose a Race: </h1>
 <div class = "raceButtons">
-
     <input type="image" id = "dwarf" onclick = dwarf() src = "/pictures/dwarf.jpeg">
     <label id = "dwarflabel">Dwarf</label>
     <input type="image" id = "elf" onclick = elf() src = "/pictures/elf.jpeg">

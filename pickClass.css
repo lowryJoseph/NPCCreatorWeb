@@ -11,3 +11,7 @@
 .class-buttons button:hover {
   background-color: #3e8e41;
 }
+
+.gender div{
+visibility: hidden;
+}
