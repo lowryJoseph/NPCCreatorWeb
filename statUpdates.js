@@ -30,6 +30,8 @@ function rollStatD20() {
   for(let i = 0; i < rolledStats.length; i++){
     rolledStats[i] = Math.floor(Math.random() * 20)+1;
   }
+      const skillsId = document.getElementById('skillsId');
+      skillsId.removeAttribute('hidden');
       populateStats();
       statModifiers();
       startingPoints();
@@ -46,6 +48,8 @@ function setStatsD6(){
     for(let i = 0; i < rolledStats.length; i++){
         rolledStats[i] = rollStatD6();
     }
+    const skillsId = document.getElementById('skillsId');
+    skillsId.removeAttribute('hidden');
     populateStats();
     statModifiers();
     startingPoints();
@@ -64,6 +68,7 @@ function populateStats(){
     int.textContent = rolledStats[3];
     wis.textContent = rolledStats[4];
     cha.textContent = rolledStats[5];
+
     startingPoints();
 }
 
@@ -101,6 +106,7 @@ function statModifiers(){
 }
 
 function startingPoints(){
+
     resetSkillPoints();
     if(chosenClass == "Barbarian"){
         const remainingPoints = document.getElementById("remainingPoints");

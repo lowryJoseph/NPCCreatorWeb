@@ -1,38 +1,63 @@
-let chosenClass;
-const classHeader = document.getElementById('classHeader');
+let chosenClass = "";
+
+const classButtons = document.getElementById('class-buttons-id');
 
 function barbarian(){
     chosenClass = "Barbarian";
     if(rolledStats != [0,0,0,0,0,0])
     populateStats();
+    confirmClassChoice();
 }
 function bard(){
     chosenClass = "Bard";
+    confirmClassChoice();
 }
-function sorcerer(){
-    chosenClass = "Sorcerer";
+function cleric(){
+    chosenClass = "Cleric";
+    confirmClassChoice();
 }
-function wizard(){
-    chosenClass = "Wizard";
+function druid(){
+    chosenClass = "Druid";
+    confirmClassChoice();
 }
 function fighter(){
     chosenClass = "Fighter";
+    confirmClassChoice();
 }
-function turd(){
-    chosenClass = "Turd";
+function monk(){
+    chosenClass = "Monk";
+    confirmClassChoice();
+}
+function paladin(){
+    chosenClass = "Paladin";
+    confirmClassChoice();
+}
+function ranger(){
+    chosenClass = "Ranger";
+    confirmClassChoice();
 }
 function rogue(){
     chosenClass = "Rogue";
+    confirmClassChoice();
 }
-function displayClass(){
-    classHeader.textContent = "Chosen Class Is: "+chosenClass;
+function sorcerer(){
+    chosenClass = "Sorcerer";
+    confirmClassChoice();
+}
+function wizard(){
+    chosenClass = "Wizard";
+    confirmClassChoice();
+
+}
+function displayChosenClass(){
+    const classChosenHeader = document.getElementById('classChosenHeader');
+    classChosenHeader.textContent = "Chosen Class Is: "+chosenClass;
+    const statDiv = document.getElementById('statDiv');
+    statDiv.removeAttribute('hidden');
 }
 function confirmClassChoice(){
-    let confirmation = "You chose: " + chosenClass;
-    if(confirm(confirmation) == true){
         removeClasses();
-        displayClass();
-    }
+        displayChosenClass();
 }
 function removeClasses() {
     let barbarian = document.getElementById('barbarian')
@@ -41,7 +66,12 @@ function removeClasses() {
     let wiz = document.getElementById('wizard')
     let fight = document.getElementById('fighter')
     let rog = document.getElementById('rogue')
-    let turd = document.getElementById('turd')
+    let cler = document.getElementById('cleric')
+    let monk = document.getElementById('monk')
+    let pal = document.getElementById('paladin')
+    let rang = document.getElementById('ranger')
+    let druid = document.getElementById('druid')
+
 
     barbarian.parentNode.removeChild(barbarian);
     bard.parentNode.removeChild(bard);
@@ -49,7 +79,11 @@ function removeClasses() {
     wiz.parentNode.removeChild(wiz);
     fight.parentNode.removeChild(fight);
     rog.parentNode.removeChild(rog);
-    turd.parentNode.removeChild(turd);
+    monk.parentNode.removeChild(monk);
+    pal.parentNode.removeChild(pal);
+    rang.parentNode.removeChild(rang);
+    druid.parentNode.removeChild(druid);
+    cler.parentNode.removeChild(cler);
 
     return false;
 }

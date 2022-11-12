@@ -1,6 +1,7 @@
 let race;
 const heading = document.getElementById('raceHeader');
 
+
 function dwarf(){
 race = "Dwarf";
 confirmRaceChoice();
@@ -40,11 +41,8 @@ function displayRace(){
 heading.textContent = "Chosen Race Is: "+race;
 }
 function confirmRaceChoice(){
-    let confirmation = "You chose: " + race;
-    if(confirm(confirmation) == true){
         removeRaces();
         displayRace();
-        }
 }
 function removeRaces() {
     let d = document.getElementById('dwarf')
@@ -54,7 +52,13 @@ function removeRaces() {
     let ho = document.getElementById('halfOrc')
     let he = document.getElementById('halfElf')
     let h = document.getElementById('human')
-
+//    let dlabel = document.getElementById('dwarflabel')
+//    let glabel = document.getElementById('gnomelabel')
+//    let elabel = document.getElementById('elflabel')
+//    let hlflabel = document.getElementById('halflinglabel')
+//    let holabel = document.getElementById('halfOrclabel')
+//    let helabel = document.getElementById('halfElflabel)
+//    let hlabel = document.getElementById('humanlabel')
     d.parentNode.removeChild(d);
     g.parentNode.removeChild(g);
     e.parentNode.removeChild(e);
@@ -62,6 +66,13 @@ function removeRaces() {
     ho.parentNode.removeChild(ho);
     he.parentNode.removeChild(he);
     h.parentNode.removeChild(h);
-
+//    dlabel.parentNode.removeChild(dlabel);
+//    glabel.parentNode.removeChild(glabel);
+//    elabel.parentNode.removeChild(elabel);
+//    hlflabel.parentNode.removeChild(hlflabel);
+//    holabel.parentNode.removeChild(holabel);
+//    helabel.parentNode.removeChild(helabel);
+//    hlabel.parentNode.removeChild(hlabel);
+classButtons.removeAttribute("hidden");
     return false;
 }

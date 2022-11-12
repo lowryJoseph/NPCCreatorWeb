@@ -6,253 +6,268 @@
 
 </head>
 <body>
+
 <h1>Create a D&D character with the click of a button(or a few more)</h1>
 <h1 id="raceHeader">Choose a Race: </h1>
-<script type = "text/javascript" src = "classFunctions.js"></script>
-<script type = "text/javascript" src = "raceFunctions.js"></script>
-<script type = "text/javascript" src = "skillPoints.js"></script>
-<script type = "text/javascript" src = "statUpdates.js"></script>
-
+<!--<img src="/pictures/allRacesMale.jpeg">-->
 
 
 <div class = "raceButtons">
-    <Button id = "dwarf" onclick = dwarf()>Dwarf</Button>
-    <Button id = "elf" onclick = elf()>Elf</Button>
-    <Button id = "gnome" onclick = gnome()>Gnome</Button>
-    <Button id = "human" onclick = human()>Human</Button>
-    <Button id = "halfElf" onclick = halfElf()>Half-Elf</Button>
-    <Button id = "halfOrc" onclick = halfOrc()>Half-Orc</Button>
-    <Button id = "halfling" onclick = halfling()>Halfling</Button>
+
+    <input type="image" id = "dwarf" onclick = dwarf() src = "/pictures/dwarf.jpeg"></input>
+    <label id = "dwarflabel">Dwarf</label>
+    <input type="image" id = "elf" onclick = elf() src = "/pictures/elf.jpeg">Elf</input>
+    <label id = "elflabel">Dwarf</label>
+    <input type="image" id = "gnome" onclick = gnome() src = "/pictures/gnome.jpeg">Gnome</input>
+    <label id = "gnomelabel">Dwarf</label>
+    <input type="image" id = "human" onclick = human() src = "/pictures/human.jpeg">Human</input>
+    <label id = "humanlabel">Dwarf</label>
+    <input type="image" id = "halfElf" onclick = halfElf() src = "/pictures/halfElf.jpeg">Half-Elf</input>
+    <label id = "halfElflabel">Dwarf</label>
+    <input type="image" id = "halfOrc" onclick = halfOrc() src = "/pictures/halfOrc.jpeg">Half-Orc</input>
+    <label id = "halfOrclabel">Dwarf</label>
+    <input type="image" id = "halfling" onclick = halfling() src = "/pictures/halfling.jpeg">Halfling</input>
+    <label id = "halflinglabel">Dwarf</label>
     <link rel="stylesheet" href="pickRace.css">
 </div>
 
-<h1 id="classHeader" >Choose a Class: </h1>
 
-<div class = "class-buttons">
-    <Button id = "barbarian" onclick = barbarian()>Barbarian</Button>
-    <Button id = "bard" onclick = bard()>Bard</Button>
-    <Button id = "sorcerer" onclick = sorcerer()>Sorcerer</Button>
-    <Button id = "wizard" onclick = wizard()>Wizard</Button>
-    <Button id = "fighter" onclick = fighter()>Fighter</Button>
-    <Button id = "turd" onclick = turd()>Turd</Button>
-    <Button id = "rogue" onclick = rogue()>Rogue</Button>
+<div class = "class-buttons" id = "class-buttons-id" hidden>
+    <h1 class = "classChosenHeader" id = "classChosenHeader">Choose a Class: </h1>
+    <input type="image" id = "barbarian" onclick = barbarian() src = "/pictures/barbarian.jpeg">Barbarian </input>
+    <input type="image" id = "bard" onclick = bard() src = "/pictures/bard.jpeg">Bard</Button>
+    <input type="image" id = "cleric" onclick = cleric() src = "/pictures/cleric.jpeg">Cleric</Button>
+    <input type="image" id = "druid" onclick = druid() src = "/pictures/druid.jpeg">Druid</Button>
+    <input type="image" id = "fighter" onclick = fighter() src = "/pictures/fighter.jpeg">Fighter</Button>
+    <input type="image" id = "monk" onclick = monk() src = "/pictures/monk.jpeg">Monk</Button>
+    <input type="image" id = "paladin" onclick = paladin() src = "/pictures/paladin.jpeg">Paladin</Button>
+    <input type="image" id = "ranger" onclick = ranger() src = "/pictures/ranger.jpeg"Ranger</Button>
+    <input type="image" id = "rogue" onclick = rogue() src = "/pictures/rogue.jpeg">Rogue</Button>
+    <input type="image" id = "sorcerer" onclick = sorcerer() src = "/pictures/sorcerer.jpeg">Sorcerer</Button>
+    <input type="image" id = "wizard" onclick = wizard() src = "/pictures/wizard.jpeg">Wizard</Button>
     <link rel="stylesheet" href="pickClass.css">
 </div>
 
-<h1> Stats</h1>
-<div class = "statsLabels">
-    <label id = "abilName">Ability Name</label>
-    <label id = "abilScore"> Ability Score </label>
-    <label id = "abilMod"> Ability Modifier </label>
-    <link rel="stylesheet" href="stats.css">
-</div>
-<div class = "statsLabels">
-    <label id = "strLabel">STR</label>
-    <label id = "strtext"> 0 </label>
-    <label id = "strMod"> 0 </label>
-    <link rel="stylesheet" href="stats.css">
-</div>
-<div class = "statsLabels">
-    <label id = "dexLabel">DEX</label>
-    <label id = "dextext"> 0 </label>
-    <label id = "dexMod"> 0 </label>
-    <link rel="stylesheet" href="stats.css">
-</div>
-<div class = "statsLabels">
-    <label id = "conLabel">CON</label>
-    <label id = "context"> 0 </label>
-    <label id = "conMod"> 0 </label>
-    <link rel="stylesheet" href="stats.css">
-</div>
-<div class = "statsLabels">
-    <label id = "intLabel">INT</label>
-    <label id = "inttext"> 0 </label>
-    <label id = "intMod"> 0 </label>
-    <link rel="stylesheet" href="stats.css">
-</div>
-<div class = "statsLabels">
-    <label id = "wisLabel">WIS</label>
-    <label id = "wistext"> 0 </label>
-    <label id = "wisMod"> 0 </label>
-    <link rel="stylesheet" href="stats.css">
-</div>
-<div class = "statsLabels">
-    <label id = "chaLabel">CHA</label>
-    <label id = "chatext"> 0 </label>
-    <label id = "chaMod"> 0 </label>
-    <link rel="stylesheet" href="stats.css">
-</div>
-<div class = "rollForStats">
-    <Button id = "twentySided" onclick = rollStatD20()>Roll 20 sided die</Button>
-    <Button id = "sixSided" onclick = setStatsD6()>Roll 4 six sided die drop lowest</Button>
+<div id = "statDiv" hidden>
+    <div class = "statsLabels">
+        <label id = "abilName">Ability Name</label>
+        <label id = "abilScore"> Ability Score </label>
+        <label id = "abilMod"> Ability Modifier </label>
+        <link rel="stylesheet" href="stats.css">
+    </div>
+    <div class = "statsLabels">
+        <label id = "strLabel">STR</label>
+        <label id = "strtext"> 0 </label>
+        <label id = "strMod"> 0 </label>
+        <link rel="stylesheet" href="stats.css">
+    </div>
+    <div class = "statsLabels">
+        <label id = "dexLabel">DEX</label>
+        <label id = "dextext"> 0 </label>
+        <label id = "dexMod"> 0 </label>
+        <link rel="stylesheet" href="stats.css">
+    </div>
+    <div class = "statsLabels">
+        <label id = "conLabel">CON</label>
+        <label id = "context"> 0 </label>
+        <label id = "conMod"> 0 </label>
+        <link rel="stylesheet" href="stats.css">
+    </div>
+    <div class = "statsLabels">
+        <label id = "intLabel">INT</label>
+        <label id = "inttext"> 0 </label>
+        <label id = "intMod"> 0 </label>
+        <link rel="stylesheet" href="stats.css">
+    </div>
+    <div class = "statsLabels">
+        <label id = "wisLabel">WIS</label>
+        <label id = "wistext"> 0 </label>
+        <label id = "wisMod"> 0 </label>
+        <link rel="stylesheet" href="stats.css">
+    </div>
+    <div class = "statsLabels">
+        <label id = "chaLabel">CHA</label>
+        <label id = "chatext"> 0 </label>
+        <label id = "chaMod"> 0 </label>
+        <link rel="stylesheet" href="stats.css">
+    </div>
+    <div class = "rollForStats">
+        <Button id = "twentySided" onclick = rollStatD20()>Roll 20 sided die</Button>
+        <Button id = "sixSided" onclick = setStatsD6()>Roll 4 six sided die drop lowest</Button>
+    </div>
 </div>
 
-<div class="skills">
+
+<div class="skills" id = "skillsId" hidden>
     <h1>Skills</h1>
+    <div class="firstThird">
     <label id = "remainingSkillPoints">Remaining Skill Points: </label>
     <object id = "remainingPoints">0</object>
     <link rel="stylesheet" href="pickSkills.css">
-    <div class="alchemy">
-        <label id = "alchemyLabel">Alchemy</label>
-        <button id = "alchemyPlus" onclick = plusSkill("alchemyPoints")>+</button>
-        <object id = "alchemyPoints">0</object>
-        <button id = "alchemyMinus" onclick = minusSkill("alchemyPoints")>-</button>
+        <div class="alchemy">
+            <label id = "alchemyLabel">Alchemy</label>
+            <button id = "alchemyPlus" onclick = plusSkill("alchemyPoints")>+</button>
+            <object id = "alchemyPoints">0</object>
+            <button id = "alchemyMinus" onclick = minusSkill("alchemyPoints")>-</button>
+        </div>
+        <div class="animalEmpathy">
+            <label id = "animalEmpathy">Animal Empathy</label>
+            <button id = "animalEmpathyPlus" onclick = plusSkill("animalEmpathyPoints")>+</button>
+            <object id = "animalEmpathyPoints">0</object>
+            <button id = "animalEmpathyMinus" onclick = minusSkill("animalEmpathyPoints")>-</button>
+        </div>
+        <div class="appraise">
+            <label id = "appraiseLabel">Appraise</label>
+            <button id = "appraisePlus" onclick = plusSkill("appraisePoints")>+</button>
+            <object id = "appraisePoints">0</object>
+            <button id = "appraiseMinus" onclick = minusSkill("appraisePoints")>-</button>
+        </div>
+        <div class="balance">
+            <label id = "balance">Balance</label>
+            <button id = "balancePlus" onclick = plusSkill("balancePoints")>+</button>
+            <object id = "balancePoints">0</object>
+            <button id = "balanceMinus" onclick = minusSkill("balancePoints")>-</button>
+        </div>
+        <div class="bluff">
+            <label id = "bluffLabel">Bluff</label>
+            <button id = "bluffPlus" onclick = plusSkill("bluffPoints")>+</button>
+            <object id = "bluffPoints">0</object>
+            <button id = "bluffMinus" onclick = minusSkill("bluffPoints")>-</button>
+        </div>
+        <div class="climb">
+            <label id = "climb">Climb</label>
+            <button id = "climbPlus" onclick = plusSkill("climbPoints")>+</button>
+            <object id = "climbPoints">0</object>
+            <button id = "climbMinus" onclick = minusSkill("climbPoints")>-</button>
+        </div>
+        <div class="craft">
+            <label id = "craft">Craft</label>
+            <button id = "craftPlus" onclick = plusSkill("craftPoints")>+</button>
+            <object id = "craftPoints">0</object>
+            <button id = "craftMinus" onclick = minusSkill("craftPoints")>-</button>
+        </div>
+        <div class="concentration">
+            <label id = "concentration">Concentration</label>
+            <button id = "concentrationPlus" onclick = plusSkill("concentrationPoints")>+</button>
+            <object id = "concentrationPoints">0</object>
+            <button id = "concentrationMinus" onclick = minusSkill("concentrationPoints")>-</button>
+        </div>
+        <div class="decipherScript">
+            <label id = "decipherScript">Decipher Script</label>
+            <button id = "decipherScriptPlus" onclick = plusSkill("decipherScriptPoints")>+</button>
+            <object id = "decipherScriptPoints">0</object>
+            <button id = "decipherScriptMinus" onclick = minusSkill("decipherScriptPoints")>-</button>
+        </div>
+        <div class="diplomacy">
+            <label id = "diplomacy">Diplomacy</label>
+            <button id = "diplomacyPlus" onclick = plusSkill("diplomacyPoints")>+</button>
+            <object id = "diplomacyPoints">0</object>
+            <button id = "diplomacyMinus" onclick = minusSkill("diplomacyPoints")>-</button>
+        </div>
     </div>
-    <div class="animalEmpathy">
-        <label id = "animalEmpathy">Animal Empathy</label>
-        <button id = "animalEmpathyPlus" onclick = plusSkill("animalEmpathyPoints")>+</button>
-        <object id = "animalEmpathyPoints">0</object>
-        <button id = "animalEmpathyMinus" onclick = minusSkill("animalEmpathyPoints")>-</button>
-    </div>
-    <div class="appraise">
-        <label id = "appraiseLabel">Appraise</label>
-        <button id = "appraisePlus" onclick = plusSkill("appraisePoints")>+</button>
-        <object id = "appraisePoints">0</object>
-        <button id = "appraiseMinus" onclick = minusSkill("appraisePoints")>-</button>
-    </div>
-    <div class="balance">
-        <label id = "balance">Balance</label>
-        <button id = "balancePlus" onclick = plusSkill("balancePoints")>+</button>
-        <object id = "balancePoints">0</object>
-        <button id = "balanceMinus" onclick = minusSkill("balancePoints")>-</button>
-    </div>
-    <div class="bluff">
-        <label id = "bluffLabel">Bluff</label>
-        <button id = "bluffPlus" onclick = plusSkill("bluffPoints")>+</button>
-        <object id = "bluffPoints">0</object>
-        <button id = "bluffMinus" onclick = minusSkill("bluffPoints")>-</button>
-    </div>
-    <div class="climb">
-        <label id = "climb">Climb</label>
-        <button id = "climbPlus" onclick = plusSkill("climbPoints")>+</button>
-        <object id = "climbPoints">0</object>
-        <button id = "climbMinus" onclick = minusSkill("climbPoints")>-</button>
-    </div>
-    <div class="craft">
-        <label id = "craft">Craft</label>
-        <button id = "craftPlus" onclick = plusSkill("craftPoints")>+</button>
-        <object id = "craftPoints">0</object>
-        <button id = "craftMinus" onclick = minusSkill("craftPoints")>-</button>
-    </div>
-    <div class="concentration">
-        <label id = "concentration">Concentration</label>
-        <button id = "concentrationPlus" onclick = plusSkill("concentrationPoints")>+</button>
-        <object id = "concentrationPoints">0</object>
-        <button id = "concentrationMinus" onclick = minusSkill("concentrationPoints")>-</button>
-    </div>
-    <div class="decipherScript">
-        <label id = "decipherScript">Decipher Script</label>
-        <button id = "decipherScriptPlus" onclick = plusSkill("decipherScriptPoints")>+</button>
-        <object id = "decipherScriptPoints">0</object>
-        <button id = "decipherScriptMinus" onclick = minusSkill("decipherScriptPoints")>-</button>
-    </div>
-    <div class="diplomacy">
-        <label id = "diplomacy">Diplomacy</label>
-        <button id = "diplomacyPlus" onclick = plusSkill("diplomacyPoints")>+</button>
-        <object id = "diplomacyPoints">0</object>
-        <button id = "diplomacyMinus" onclick = minusSkill("diplomacyPoints")>-</button>
-    </div>
-    <div class="disableDevice">
-        <label id = "disableDevice">Disable Device</label>
-        <button id = "disableDevicePlus" onclick = plusSkill("disableDevicePoints")>+</button>
-        <object id = "disableDevicePoints">0</object>
-        <button id = "disableDeviceMinus" onclick = minusSkill("disableDevicePoints")>-</button>
-    </div>
-    <div class="disguise">
-        <label id = "disguise">Disguise</label>
-        <button id = "disguisePlus" onclick = plusSkill("disguisePoints")>+</button>
-        <object id = "disguisePoints">0</object>
-        <button id = "disguiseMinus" onclick = minusSkill("disguisePoints")>-</button>
-    </div>
-    <div class="escapeArtist">
-        <label id = "escapeArtist">Escape Artist</label>
-        <button id = "escapeArtistPlus" onclick = plusSkill("escapeArtistPoints")>+</button>
-        <object id = "escapeArtistPoints">0</object>
-        <button id = "escapeArtistMinus" onclick = minusSkill("escapeArtistPoints")>-</button>
-    </div>
-    <div class="forgery">
-        <label id = "forgery">Forgery</label>
-        <button id = "forgeryPlus" onclick = plusSkill("forgeryPoints")>+</button>
-        <object id = "forgeryPoints">0</object>
-        <button id = "forgeryMinus" onclick = minusSkill("forgeryPoints")>-</button>
-    </div>
-    <div class="gatherInformation">
-        <label id = "gatherInformation">Gather Information</label>
-        <button id = "gatherInformationPlus" onclick = plusSkill("gatherInformationPoints")>+</button>
-        <object id = "gatherInformationPoints">0</object>
-        <button id = "gatherInformationMinus" onclick = minusSkill("gatherInformationPoints")>-</button>
-    </div>
-    <div class="handleAnimal">
-        <label id = "handleAnimal">Handle Animal</label>
-        <button id = "handleAnimalPlus" onclick = plusSkill("handleAnimalPoints")>+</button>
-        <object id = "handleAnimalPoints">0</object>
-        <button id = "handleAnimalMinus" onclick = minusSkill("handleAnimalPoints")>-</button>
-    </div>
-    <div class="heal">
-        <label id = "heal">Heal</label>
-        <button id = "healPlus" onclick = plusSkill("healPoints")>+</button>
-        <object id = "healPoints">0</object>
-        <button id = "healMinus" onclick = minusSkill("healPoints")>-</button>
-    </div>
-    <div class="hide">
-        <label id = "hide">Hide</label>
-        <button id = "hidePlus" onclick = plusSkill("hidePoints")>+</button>
-        <object id = "hidePoints">0</object>
-        <button id = "hideMinus" onclick = minusSkill("hidePoints")>-</button>
-    </div>
-    <div class="innuendo">
-        <label id = "innuendo">Innuendo</label>
-        <button id = "innuendoPlus" onclick = plusSkill("innuendoPoints")>+</button>
-        <object id = "innuendoPoints">0</object>
-        <button id = "innuendoMinus" onclick = minusSkill("innuendoPoints")>-</button>
-    </div>
-    <div class="intimidate">
-        <label id = "intimidate">Intimidate</label>
-        <button id = "intimidatePlus" onclick = plusSkill("intimidatePoints")>+</button>
-        <object id = "intimidatePoints">0</object>
-        <button id = "intimidateMinus" onclick = minusSkill("intimidatePoints")>-</button>
-    </div>
-    <div class="intuitDirection">
-        <label id = "intuitDirection">Intuit Direction</label>
-        <button id = "intuitDirectionPlus" onclick = plusSkill("intuitDirectionPoints")>+</button>
-        <object id = "intuitDirectionPoints">0</object>
-        <button id = "intuitDirectionMinus" onclick = minusSkill("intuitDirectionPoints")>-</button>
-    </div>
-    <div class="jump">
-        <label id = "jump">Jump</label>
-        <button id = "jumpPlus" onclick = plusSkill("jumpPoints")>+</button>
-        <object id = "jumpPoints">0</object>
-        <button id = "jumpMinus" onclick = minusSkill("jumpPoints")>-</button>
-    </div>
-    <div class="knowledgeArcana">
-        <label id = "knowledgeArcana">Knowledge(Arcana)</label>
-        <button id = "knowledgeArcanaPlus" onclick = plusSkill("knowledgeArcanaPoints")>+</button>
-        <object id = "knowledgeArcanaPoints">0</object>
-        <button id = "knowledgeArcanaMinus" onclick = minusSkill("knowledgeArcanaPoints")>-</button>
-    </div>
-    <div class="knowledgeReligion">
-        <label id = "knowledgeReligion">Knowledge(Religion)</label>
-        <button id = "knowledgeReligionPlus" onclick = plusSkill("knowledgeReligionPoints")>+</button>
-        <object id = "knowledgeReligionPoints">0</object>
-        <button id = "knowledgeReligionMinus" onclick = minusSkill("knowledgeReligionPoints")>-</button>
-    </div>
-    <div class="knowledgeNature">
-        <label id = "knowledgeNature">Knowledge(Nature)</label>
-        <button id = "knowledgeNaturePlus" onclick = plusSkill("knowledgeNaturePoints")>+</button>
-        <object id = "knowledgeNaturePoints">0</object>
-        <button id = "knowledgeNatureMinus" onclick = minusSkill("knowledgeNaturePoints")>-</button>
-    </div>
-    <div class="knowledgeAllSkills">
-        <label id = "knowledgeAllSkills">Knowledge(All Skills)</label>
-        <button id = "knowledgeAllSkillsPlus" onclick = plusSkill("knowledgeAllSkillsPoints")>+</button>
-        <object id = "knowledgeAllSkillsPoints">0</object>
-        <button id = "knowledgeAllSkillsMinus" onclick = minusSkill("knowledgeAllSkillsPoints")>-</button>
-    </div>
-    <div class="listen">
-        <label id = "listen">Listen</label>
-        <button id = "listenPlus" onclick = plusSkill("listenPoints")>+</button>
-        <object id = "listenPoints">0</object>
-        <button id = "listenMinus" onclick = minusSkill("listenPoints")>-</button>
+    <div class = "secondThird">
+        <div class="disableDevice">
+            <label id = "disableDevice">Disable Device</label>
+            <button id = "disableDevicePlus" onclick = plusSkill("disableDevicePoints")>+</button>
+            <object id = "disableDevicePoints">0</object>
+            <button id = "disableDeviceMinus" onclick = minusSkill("disableDevicePoints")>-</button>
+        </div>
+        <div class="disguise">
+            <label id = "disguise">Disguise</label>
+            <button id = "disguisePlus" onclick = plusSkill("disguisePoints")>+</button>
+            <object id = "disguisePoints">0</object>
+            <button id = "disguiseMinus" onclick = minusSkill("disguisePoints")>-</button>
+        </div>
+        <div class="escapeArtist">
+            <label id = "escapeArtist">Escape Artist</label>
+            <button id = "escapeArtistPlus" onclick = plusSkill("escapeArtistPoints")>+</button>
+            <object id = "escapeArtistPoints">0</object>
+            <button id = "escapeArtistMinus" onclick = minusSkill("escapeArtistPoints")>-</button>
+        </div>
+        <div class="forgery">
+            <label id = "forgery">Forgery</label>
+            <button id = "forgeryPlus" onclick = plusSkill("forgeryPoints")>+</button>
+            <object id = "forgeryPoints">0</object>
+            <button id = "forgeryMinus" onclick = minusSkill("forgeryPoints")>-</button>
+        </div>
+        <div class="gatherInformation">
+            <label id = "gatherInformation">Gather Information</label>
+            <button id = "gatherInformationPlus" onclick = plusSkill("gatherInformationPoints")>+</button>
+            <object id = "gatherInformationPoints">0</object>
+            <button id = "gatherInformationMinus" onclick = minusSkill("gatherInformationPoints")>-</button>
+        </div>
+        <div class="handleAnimal">
+            <label id = "handleAnimal">Handle Animal</label>
+            <button id = "handleAnimalPlus" onclick = plusSkill("handleAnimalPoints")>+</button>
+            <object id = "handleAnimalPoints">0</object>
+            <button id = "handleAnimalMinus" onclick = minusSkill("handleAnimalPoints")>-</button>
+        </div>
+        <div class="heal">
+            <label id = "heal">Heal</label>
+            <button id = "healPlus" onclick = plusSkill("healPoints")>+</button>
+            <object id = "healPoints">0</object>
+            <button id = "healMinus" onclick = minusSkill("healPoints")>-</button>
+        </div>
+        <div class="hide">
+            <label id = "hide">Hide</label>
+            <button id = "hidePlus" onclick = plusSkill("hidePoints")>+</button>
+            <object id = "hidePoints">0</object>
+            <button id = "hideMinus" onclick = minusSkill("hidePoints")>-</button>
+        </div>
+        <div class="innuendo">
+            <label id = "innuendo">Innuendo</label>
+            <button id = "innuendoPlus" onclick = plusSkill("innuendoPoints")>+</button>
+            <object id = "innuendoPoints">0</object>
+            <button id = "innuendoMinus" onclick = minusSkill("innuendoPoints")>-</button>
+        </div>
+        <div class="intimidate">
+            <label id = "intimidate">Intimidate</label>
+            <button id = "intimidatePlus" onclick = plusSkill("intimidatePoints")>+</button>
+            <object id = "intimidatePoints">0</object>
+            <button id = "intimidateMinus" onclick = minusSkill("intimidatePoints")>-</button>
+        </div>
+        <div class="intuitDirection">
+            <label id = "intuitDirection">Intuit Direction</label>
+            <button id = "intuitDirectionPlus" onclick = plusSkill("intuitDirectionPoints")>+</button>
+            <object id = "intuitDirectionPoints">0</object>
+            <button id = "intuitDirectionMinus" onclick = minusSkill("intuitDirectionPoints")>-</button>
+        </div>
+        <div class="jump">
+            <label id = "jump">Jump</label>
+            <button id = "jumpPlus" onclick = plusSkill("jumpPoints")>+</button>
+            <object id = "jumpPoints">0</object>
+            <button id = "jumpMinus" onclick = minusSkill("jumpPoints")>-</button>
+        </div>
+        <div class="knowledgeArcana">
+            <label id = "knowledgeArcana">Knowledge(Arcana)</label>
+            <button id = "knowledgeArcanaPlus" onclick = plusSkill("knowledgeArcanaPoints")>+</button>
+            <object id = "knowledgeArcanaPoints">0</object>
+            <button id = "knowledgeArcanaMinus" onclick = minusSkill("knowledgeArcanaPoints")>-</button>
+        </div>
+        <div class="knowledgeReligion">
+            <label id = "knowledgeReligion">Knowledge(Religion)</label>
+            <button id = "knowledgeReligionPlus" onclick = plusSkill("knowledgeReligionPoints")>+</button>
+            <object id = "knowledgeReligionPoints">0</object>
+            <button id = "knowledgeReligionMinus" onclick = minusSkill("knowledgeReligionPoints")>-</button>
+        </div>
+        <div class="knowledgeNature">
+            <label id = "knowledgeNature">Knowledge(Nature)</label>
+            <button id = "knowledgeNaturePlus" onclick = plusSkill("knowledgeNaturePoints")>+</button>
+            <object id = "knowledgeNaturePoints">0</object>
+            <button id = "knowledgeNatureMinus" onclick = minusSkill("knowledgeNaturePoints")>-</button>
+        </div>
+        <div class="knowledgeAllSkills">
+            <label id = "knowledgeAllSkills">Knowledge(All Skills)</label>
+            <button id = "knowledgeAllSkillsPlus" onclick = plusSkill("knowledgeAllSkillsPoints")>+</button>
+            <object id = "knowledgeAllSkillsPoints">0</object>
+            <button id = "knowledgeAllSkillsMinus" onclick = minusSkill("knowledgeAllSkillsPoints")>-</button>
+        </div>
+        <div class="listen">
+            <label id = "listen">Listen</label>
+            <button id = "listenPlus" onclick = plusSkill("listenPoints")>+</button>
+            <object id = "listenPoints">0</object>
+            <button id = "listenMinus" onclick = minusSkill("listenPoints")>-</button>
+        </div>
     </div>
     <div class="moveSilently">
         <label id = "moveSilently">Move Silent</label>
@@ -363,6 +378,10 @@
         <button id = "wildernessLoreMinus" onclick = minusSkill("wildernessLorePoints")>-</button>
     </div>
 </div>
+<script type = "text/javascript" src = "classFunctions.js"></script>
+<script type = "text/javascript" src = "raceFunctions.js"></script>
+<script type = "text/javascript" src = "skillPoints.js"></script>
+<script type = "text/javascript" src = "statUpdates.js"></script>
 
 </body>
 </html>
