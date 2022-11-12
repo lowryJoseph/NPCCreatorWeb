@@ -28,7 +28,9 @@ function racialModifiers(){
 
 function rollStatD20() {
   for(let i = 0; i < rolledStats.length; i++){
-    rolledStats[i] = Math.floor(Math.random() * 20)+1;
+    rolledStats[i] = Math.floor(Math.random() * 20)+4;
+    if(rolledStats[i] > 20)
+        rolledStats[i] = 20;
   }
       const skillsId = document.getElementById('skillsId');
       skillsId.removeAttribute('hidden');
@@ -108,10 +110,33 @@ function statModifiers(){
 function startingPoints(){
 
     resetSkillPoints();
-    if(chosenClass == "Barbarian"){
+    if(chosenClass == "Barbarian" || chosenClass == "Bard"|| chosenClass == "Druid" || chosenClass == "Monk"
+    || chosenClass == "Ranger"){
         const remainingPoints = document.getElementById("remainingPoints");
         const int = document.getElementById('intMod');
         let intPoints = parseInt(int.textContent);
-        remainingPoints.textContent = ((intPoints+4)*4) ;
+        if(race == "Human")
+            remainingPoints.textContent = ((intPoints+4)*4)+4;
+        else
+            remainingPoints.textContent = ((intPoints+4)*4);
+    }
+    else if(chosenClass == "Cleric" || chosenClass == "Fighter" || chosenClass == "Paladin"||chosenClass == "Sorcerer"
+    ||chosenClass == "Wizard"){
+        const remainingPoints = document.getElementById("remainingPoints");
+        const int = document.getElementById('intMod');
+        let intPoints = parseInt(int.textContent);
+        if(race == "Human")
+            remainingPoints.textContent = ((intPoints+2)*4)+4;
+        else
+             remainingPoints.textContent = ((intPoints+2)*4);
+    }
+    else if(chosenClass == "Rogue"){
+        const remainingPoints = document.getElementById("remainingPoints");
+        const int = document.getElementById('intMod');
+        let intPoints = parseInt(int.textContent);
+        if(race == "Human")
+            remainingPoints.textContent = ((intPoints+8)*4)+4;
+        else
+            remainingPoints.textContent = ((intPoints+8)*4);
     }
 }

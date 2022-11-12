@@ -4,8 +4,6 @@ const classButtons = document.getElementById('class-buttons-id');
 
 function barbarian(){
     chosenClass = "Barbarian";
-    if(rolledStats != [0,0,0,0,0,0])
-    populateStats();
     confirmClassChoice();
 }
 function bard(){
@@ -71,7 +69,17 @@ function removeClasses() {
     let pal = document.getElementById('paladin')
     let rang = document.getElementById('ranger')
     let druid = document.getElementById('druid')
-
+    let barbarianlabel = document.getElementById('barbarianlabel')
+    let bardlabel = document.getElementById('bardlabel')
+    let sorlabel = document.getElementById('sorcererlabel')
+    let wizlabel = document.getElementById('wizardlabel')
+    let fightlabel = document.getElementById('fighterlabel')
+    let roglabel = document.getElementById('roguelabel')
+    let clerlabel = document.getElementById('clericlabel')
+    let monklabel = document.getElementById('monklabel')
+    let pallabel = document.getElementById('paladinlabel')
+    let ranglabel = document.getElementById('rangerlabel')
+    let druidlabel = document.getElementById('druidlabel')
 
     barbarian.parentNode.removeChild(barbarian);
     bard.parentNode.removeChild(bard);
@@ -84,6 +92,17 @@ function removeClasses() {
     rang.parentNode.removeChild(rang);
     druid.parentNode.removeChild(druid);
     cler.parentNode.removeChild(cler);
+    barbarianlabel.parentNode.removeChild(barbarianlabel);
+    bardlabel.parentNode.removeChild(bardlabel);
+    sorlabel.parentNode.removeChild(sorlabel);
+    wizlabel.parentNode.removeChild(wizlabel);
+    fightlabel.parentNode.removeChild(fightlabel);
+    roglabel.parentNode.removeChild(roglabel);
+    monklabel.parentNode.removeChild(monklabel);
+    pallabel.parentNode.removeChild(pallabel);
+    ranglabel.parentNode.removeChild(ranglabel);
+    druidlabel.parentNode.removeChild(druidlabel);
+    clerlabel.parentNode.removeChild(clerlabel);
 
     return false;
 }
