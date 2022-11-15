@@ -54,6 +54,8 @@ function confirmRaceChoice(){
         displayRace();
 }
 function removeRaces() {
+    let heading = document.getElementById('heading');
+    heading.setAttribute('hidden', true);
     let d = document.getElementById('dwarf');
     let g = document.getElementById('gnome');
     let e = document.getElementById('elf');

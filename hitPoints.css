@@ -1,0 +1,9 @@
+.hitPoints label{
+ background-color: BLACK; /* Green background */
+  border: 1px solid white; /* Green border */
+  color: WHITE; /* White text */
+  width: 10%; /* Set a width if needed */
+  size: 10px 30px;
+  padding: 1px 24px;
+  border-bottom: none;
+}

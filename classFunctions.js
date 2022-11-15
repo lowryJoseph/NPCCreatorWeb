@@ -1,51 +1,60 @@
 let chosenClass = "";
-
 const classButtons = document.getElementById('class-buttons-id');
 
 function barbarian(){
     chosenClass = "Barbarian";
     confirmClassChoice();
+    d12HitPoints();
 }
 function bard(){
     chosenClass = "Bard";
     confirmClassChoice();
+    d6HitPoints();
 }
 function cleric(){
     chosenClass = "Cleric";
     confirmClassChoice();
+    d8HitPoints();
 }
 function druid(){
     chosenClass = "Druid";
     confirmClassChoice();
+    d8HitPoints();
 }
 function fighter(){
     chosenClass = "Fighter";
     confirmClassChoice();
+    d10HitPoints();
 }
 function monk(){
     chosenClass = "Monk";
     confirmClassChoice();
+    d8HitPoints();
 }
 function paladin(){
     chosenClass = "Paladin";
     confirmClassChoice();
+    d10HitPoints();
 }
 function ranger(){
     chosenClass = "Ranger";
     confirmClassChoice();
+    d10HitPoints();
 }
 function rogue(){
     chosenClass = "Rogue";
     confirmClassChoice();
+    d6HitPoints();
 }
 function sorcerer(){
     chosenClass = "Sorcerer";
     confirmClassChoice();
+    d4HitPoints();
 }
 function wizard(){
     chosenClass = "Wizard";
     confirmClassChoice();
-
+    d4HitPoints();
 }
 function displayChosenClass(){
     const classChosenHeader = document.getElementById('classChosenHeader');
@@ -54,8 +63,9 @@ function displayChosenClass(){
     statDiv.removeAttribute('hidden');
 }
 function confirmClassChoice(){
-        removeClasses();
-        displayChosenClass();
+
+    removeClasses();
+    displayChosenClass();
 }
 function removeClasses() {
     let barbarian = document.getElementById('barbarian')

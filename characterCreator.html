@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title class = "title">Create an NPC with the click of a button</title>
+    <title class = "title" id = "title">Create an NPC with the click of a button</title>
 
 </head>
 <body>
 
-<h1>Create a D&D character with the click of a button(or a few more)</h1>
+<h1 id = "heading">Create a D&D character with the click of a button(or a few more)</h1>
 <h1 id = "randomName" hidden></h1>
 <div id = gender>
     <h1>Male or Female?</h1>
@@ -61,7 +61,10 @@
     <label id = "wizardlabel">Wizard</label>
     <link rel="stylesheet" href="pickClass.css">
 </div>
-
+<div class = "hitPoints" id = "hitPoints" hidden>
+    <label id = "totalHitPoints"></label>
+    <link rel="stylesheet" href="hitPoints.css">
+</div>
 <div id = "statDiv" hidden>
     <div class = "statsLabels">
         <label id = "abilName">Ability Name</label>
@@ -344,5 +347,7 @@
 <script type = "text/javascript" src = "skillPoints.js"></script>
 <script type = "text/javascript" src = "statUpdates.js"></script>
 <script type = "text/javascript" src = "skillChanging.js"></script>
+<script type = "text/javascript" src = "hitPoints.js"></script>
+
 </body>
 </html>

@@ -38,6 +38,7 @@ function rollStatD20() {
       const skillsRemainingPoints = document.getElementById('skillsRemainingPoints');
       skillsRemainingPoints.removeAttribute('hidden');
       skillsId.removeAttribute('hidden');
+
       populateStats();
       statModifiers();
       startingPoints();
@@ -236,6 +237,11 @@ function statModifiers(){
         chaMod.textContent = "+" + parseInt((rolledStats[5] - 10) / 2 );
     else
         chaMod.textContent = 0;
+    let hitPoints = document.getElementById('hitPoints');
+    hitPoints.removeAttribute('hidden');
+    let totalHitPoints = document.getElementById('totalHitPoints');
+    let newHitPoints = parseInt(hitPointsRolled) + parseInt((rolledStats[2] - 10) / 2 );
+    totalHitPoints.textContent = 'Hit Points: ' + newHitPoints;
 }
 
 function startingPoints(){
