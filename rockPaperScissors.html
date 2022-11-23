@@ -1,0 +1,31 @@
+
+<h1>It's time for Rock Paper Scissors!</h1>
+<h1> PICK YOUR POISON</h1>
+
+<div>Your choice:</div>
+<input type="image" id = "rock" onclick=pickRock() src = "/pictures/rock-biden.jpeg">
+<label id = "rockLabel">Rock</label>
+<input type="image" id = "paper"  onclick=pickPaper() src = "/pictures/paper.png">
+<label id = "paperLabel">Paper</label>
+<input type="image" id = "scissors"  onclick=pickScissors() src = "/pictures/scissors.jpeg">
+<label id = "scissorsLabel">Scissors</label>
+<div>Opponent:</div>
+<input type="image" id = "rockOpp" src = "/pictures/rock-biden.jpeg" hidden>
+<label id = "rockLabelOpp"> </label>
+<input type="image" id = "paperOpp"  src = "/pictures/paper.png" hidden>
+<label id = "paperLabelOpp"> </label>
+<input type="image" id = "scissorsOpp"  src = "/pictures/scissors.jpeg" hidden>
+<label id = "scissorsLabelOpp"> </label>
+<h1>Wins/Losses</h1>
+<label id = "Wins">Wins</label>
+<label id = "winsAmount">0</label>
+<label id = Losses">Losses</label>
+<label id = lossesAmount>0</label>
+<div>Reset</div>
+<button id = "nextGame" onclick = nextGame()>Next Game</button>
+<button id  = "resetButton" onclick = resetAll()>Reset</button>
+<div id = "outcome">Outcome:</div>
+<label id = "outcomeLabel"></label>
+
+
+<script type = "text/javascript" src = "rockPaperScissors.js"></script>
