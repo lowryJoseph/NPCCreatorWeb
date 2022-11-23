@@ -53,14 +53,17 @@ function chooseWinner(){
     scissorsLabel.textContent = "";
     paperLabel.textContent = "";
     if(choice == "rock"){
+        rock.disabled = true;
         scissors.setAttribute('hidden', true);
         paper.setAttribute('hidden', true);
     }
     else if(choice == "paper"){
+        paper.disabled = true;
         scissors.setAttribute('hidden', true);
         rock.setAttribute('hidden', true);
     }
     else if(choice == "scissors"){
+        scissors.disabled = true;
         paper.setAttribute('hidden', true);
         rock.setAttribute('hidden', true);
     }
@@ -94,8 +97,11 @@ function chooseWinner(){
 
 function nextGame(){
         rock.removeAttribute('hidden');
+        rock.disabled = false;
         scissors.removeAttribute('hidden');
+        scissors.disabled = false;
         paper.removeAttribute('hidden');
+        paper.disabled = false;
         rockOpp.setAttribute('hidden', true);
         paperOpp.setAttribute('hidden', true);
         scissorsOpp.setAttribute('hidden', true);
