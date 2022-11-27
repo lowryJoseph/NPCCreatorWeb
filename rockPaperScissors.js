@@ -1,6 +1,6 @@
 let opponentChoice;
 let choice;
-const winsAmoutn = document.getElementById('winsAmount');
+const winsAmount = document.getElementById('winsAmount');
 const lossesAmount = document.getElementById('lossesAmount');
 const rockLabel = document.getElementById('rockLabel');
 const scissorsLabel = document.getElementById('scissorsLabel');

@@ -286,7 +286,7 @@ function changeSkillsForClass(){
                 senseMotive.setAttribute("style", "background-color: yellow");
                 speakLanguage.setAttribute("style", "background-color: yellow");
                 spot.setAttribute("style", "background-color: yellow");
-                tubmle.setAttribute("style", "background-color: yellow");
+                tumble.setAttribute("style", "background-color: yellow");
                 useRope.setAttribute("style", "background-color: yellow");
     }
         else if(chosenClass == "Fighter"){

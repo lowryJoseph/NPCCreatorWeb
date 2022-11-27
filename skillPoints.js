@@ -1,34 +1,51 @@
 let changeSkillPoints;
 
-function plusSkill(id){
+function plusSkill(id, label){
      const skill = document.getElementById(id);
      const remainingPoints = document.getElementById("remainingPoints");
      let pointsLeft = parseInt(remainingPoints.textContent);
      let oldScore = parseInt(skill.textContent);
      if(pointsLeft >=1){
         skill.textContent = oldScore+1;
-        changeRemainingPointsMinus();
+        changeRemainingPointsMinus(label);
      }
 }
 
-function minusSkill(id){
+function minusSkill(id, label){
      const skill = document.getElementById(id);
+     const skillLabel = document.getElementById(label);
      let oldScore = parseInt(skill.textContent);
-     if(oldScore >=1){
-        skill.textContent = oldScore-1;
-        changeRemainingPointsPlus();
-     }
-}
+     if(oldScore >=2 && skillLabel.getAttribute("style") == "background-color: yellow"){
+        skill.textContent = oldScore - 1;
+        changeRemainingPointsPlus(label);
+    }
+    else if(oldScore >=1 && skillLabel.getAttribute("style") == "background-color: green"){
+        skill.textContent = oldScore - 1;
+        changeRemainingPointsPlus(label);
+    }
 
-function changeRemainingPointsPlus(){
+ }
+
+
+function changeRemainingPointsPlus(label){
+    const skillLabel = document.getElementById(label);
     const remainingPoints = document.getElementById("remainingPoints");
     let oldPoints = parseInt(remainingPoints.textContent) ;
-    remainingPoints.textContent = oldPoints+1;
+    if(skillLabel.getAttribute("style") == "background-color: yellow"){
+       remainingPoints.textContent = oldPoints+2;
+    }
+    else
+        remainingPoints.textContent = oldPoints+1;
 }
-function changeRemainingPointsMinus(){
+function changeRemainingPointsMinus(label){
+    const skillLabel = document.getElementById(label);
     const remainingPoints = document.getElementById("remainingPoints");
     let oldPoints = parseInt(remainingPoints.textContent);
-    remainingPoints.textContent = oldPoints-1;
+    if(skillLabel.getAttribute("style") == "background-color: yellow"){
+           remainingPoints.textContent = oldPoints-2;
+    }
+    else
+        remainingPoints.textContent = oldPoints-1;
 }
 
 function resetSkillPoints(){
