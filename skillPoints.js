@@ -2,10 +2,17 @@ let changeSkillPoints;
 
 function plusSkill(id, label){
      const skill = document.getElementById(id);
+     let skillLabel = document.getElementById(label);
      const remainingPoints = document.getElementById("remainingPoints");
      let pointsLeft = parseInt(remainingPoints.textContent);
      let oldScore = parseInt(skill.textContent);
-     if(pointsLeft >=1){
+      if(pointsLeft >=2 && skillLabel.getAttribute("style") == "background-color: yellow"){
+         skill.textContent = oldScore+1;
+         changeRemainingPointsMinus(label);
+      }
+      else if(pointsLeft == 1 && skillLabel.getAttribute("style") == "background-color: yellow"){
+      }
+     else if(pointsLeft >=1){
         skill.textContent = oldScore+1;
         changeRemainingPointsMinus(label);
      }
@@ -13,13 +20,13 @@ function plusSkill(id, label){
 
 function minusSkill(id, label){
      const skill = document.getElementById(id);
-     const skillLabel = document.getElementById(label);
+     let skillLabel = document.getElementById(label);
      let oldScore = parseInt(skill.textContent);
      if(oldScore >=2 && skillLabel.getAttribute("style") == "background-color: yellow"){
         skill.textContent = oldScore - 1;
         changeRemainingPointsPlus(label);
     }
-    else if(oldScore >=1 && skillLabel.getAttribute("style") == "background-color: green"){
+    else if(oldScore >=1){
         skill.textContent = oldScore - 1;
         changeRemainingPointsPlus(label);
     }
